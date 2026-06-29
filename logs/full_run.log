@@ -1,0 +1,233 @@
+2026-06-29 16:51:31 | INFO     | Chrome launched (headless=True)
+2026-06-29 16:51:31 | INFO     | Phase 1: mapping Equipment mega-menu from https://www.jlg.com/en
+2026-06-29 16:51:43 | INFO     | Parsed 17 menu entries from __NEXT_DATA__
+2026-06-29 16:51:48 | INFO     | Parsed 17 menu entries from __NEXT_DATA__
+2026-06-29 16:51:53 | INFO     | Parsed 17 menu entries from __NEXT_DATA__
+2026-06-29 16:51:57 | INFO     | Parsed 17 menu entries from __NEXT_DATA__
+2026-06-29 16:52:02 | INFO     | Parsed 17 menu entries from __NEXT_DATA__
+2026-06-29 16:52:07 | INFO     | Parsed 17 menu entries from __NEXT_DATA__
+2026-06-29 16:52:11 | INFO     | Parsed 17 menu entries from __NEXT_DATA__
+2026-06-29 16:52:11 | INFO     |   Menu: Boom Lifts → Articulating → - (https://www.jlg.com/en/equipment/boom-lifts/articulating)
+2026-06-29 16:52:11 | INFO     |   Menu: Boom Lifts → Telescopic → - (https://www.jlg.com/en/equipment/boom-lifts/telescopic)
+2026-06-29 16:52:11 | INFO     |   Menu: Boom Lifts → Compact Crawlers → - (https://www.jlg.com/en/equipment/boom-lifts/compact-crawlers)
+2026-06-29 16:52:11 | INFO     |   Menu: Boom Lifts → Toucan Mast Lift → - (https://www.jlg.com/en/equipment/boom-lifts/toucan-mast-lifts)
+2026-06-29 16:52:11 | INFO     |   Menu: Boom Lifts → Towable → - (https://www.jlg.com/en/equipment/boom-lifts/towable)
+2026-06-29 16:52:11 | INFO     |   Menu: Scissor Lifts → Davinci All Electric Series → - (https://www.jlg.com/en/equipment/scissor-lifts/ae-davinci-series)
+2026-06-29 16:52:11 | INFO     |   Menu: Scissor Lifts → ERT Series → - (https://www.jlg.com/en/equipment/scissor-lifts/ert-series)
+2026-06-29 16:52:11 | INFO     |   Menu: Scissor Lifts → Micro-Sized Series → - (https://www.jlg.com/en/equipment/scissor-lifts/micro-sized-series)
+2026-06-29 16:52:11 | INFO     |   Menu: Scissor Lifts → ES Series → - (https://www.jlg.com/en/equipment/scissor-lifts/es-series)
+2026-06-29 16:52:11 | INFO     |   Menu: Scissor Lifts → RT Series → - (https://www.jlg.com/en/equipment/scissor-lifts/rt-series)
+2026-06-29 16:52:11 | INFO     |   Menu: Telehandlers → JLG Rotating Telehandlers → - (https://www.jlg.com/en/equipment/telehandlers/rotating)
+2026-06-29 16:52:11 | INFO     |   Menu: Telehandlers → JLG Telehandlers → - (https://www.jlg.com/en/equipment/telehandlers/jlg)
+2026-06-29 16:52:11 | INFO     |   Menu: Telehandlers → SkyTrak Telehandlers → - (https://www.jlg.com/en/equipment/telehandlers/skytrak)
+2026-06-29 16:52:11 | INFO     |   Menu: Low Level Access → Non-Powered EcoLifts → - (https://www.jlg.com/en/equipment/low-level-access/non-powered-ecolifts)
+2026-06-29 16:52:11 | INFO     |   Menu: Low Level Access → Push-Around Lifts → - (https://www.jlg.com/en/equipment/low-level-access/push-around-lifts)
+2026-06-29 16:52:11 | INFO     |   Menu: Vertical Lifts → - → - (https://www.jlg.com/en/equipment/vertical-lifts)
+2026-06-29 16:52:11 | INFO     |   Menu: Stock Pickers → - → - (https://www.jlg.com/en/equipment/stock-pickers)
+2026-06-29 16:52:11 | INFO     | Phase 1 complete: discovered 17 listing URLs
+2026-06-29 16:52:21 | INFO     | Currently scraping:
+Boom Lifts
+Articulating
+Electric & Hybrid
+E300 Series
+2026-06-29 16:52:24 | INFO     | Found 1 models...
+2026-06-29 16:52:24 | INFO     | Currently scraping model: E300AJP
+2026-06-29 16:52:24 | INFO     | Currently scraping:
+Boom Lifts
+Articulating
+Electric & Hybrid
+E400 Series
+2026-06-29 16:52:27 | INFO     | Found 2 models...
+2026-06-29 16:52:27 | INFO     | Currently scraping model: E400AJPN
+2026-06-29 16:52:27 | INFO     | Currently scraping model: E400AN
+2026-06-29 16:52:27 | INFO     | Currently scraping:
+Boom Lifts
+Articulating
+Electric & Hybrid
+E450 Series
+2026-06-29 16:52:30 | INFO     | Found 1 models...
+2026-06-29 16:52:30 | INFO     | Currently scraping model: E450AJ
+2026-06-29 16:52:30 | INFO     | Currently scraping:
+Boom Lifts
+Articulating
+Engine Powered
+450 Series
+2026-06-29 16:52:34 | INFO     | Found 2 models...
+2026-06-29 16:52:34 | INFO     | Currently scraping model: 450AJ
+2026-06-29 16:52:34 | INFO     | Currently scraping model: 450AJ HC3
+2026-06-29 16:52:34 | INFO     | Currently scraping:
+Boom Lifts
+Articulating
+Engine Powered
+600 Series
+2026-06-29 16:52:37 | INFO     | Found 2 models...
+2026-06-29 16:52:37 | INFO     | Currently scraping model: 600AJ
+2026-06-29 16:52:37 | INFO     | Currently scraping model: 600AJ HC3
+2026-06-29 16:52:37 | INFO     | Currently scraping:
+Boom Lifts
+Articulating
+Engine Powered
+800 Series
+2026-06-29 16:52:40 | INFO     | Found 2 models...
+2026-06-29 16:52:40 | INFO     | Currently scraping model: 800AJ
+2026-06-29 16:52:40 | INFO     | Currently scraping model: 800AJ HC3
+2026-06-29 16:52:40 | INFO     | Currently scraping:
+Boom Lifts
+Articulating
+Engine Powered
+Ultra Series
+2026-06-29 16:52:43 | INFO     | Found 2 models...
+2026-06-29 16:52:43 | INFO     | Currently scraping model: 1250AJP
+2026-06-29 16:52:43 | INFO     | Currently scraping model: 1500AJP
+2026-06-29 16:52:55 | INFO     | Currently scraping:
+Boom Lifts
+Telescopic
+Electric & Hybrid
+EC600 and H600 Series
+2026-06-29 16:52:58 | INFO     | Found 4 models...
+2026-06-29 16:52:58 | INFO     | Currently scraping model: EC600SJ
+2026-06-29 16:52:58 | INFO     | Currently scraping model: EC600SJP
+2026-06-29 16:52:58 | INFO     | Currently scraping model: H600SJ
+2026-06-29 16:52:58 | INFO     | Currently scraping model: H600SJP
+2026-06-29 16:52:58 | INFO     | Currently scraping:
+Boom Lifts
+Telescopic
+Engine Powered
+400 Crawler Series
+2026-06-29 16:53:01 | INFO     | Found 1 models...
+2026-06-29 16:53:01 | INFO     | Currently scraping model: 460SJC
+2026-06-29 16:53:01 | INFO     | Currently scraping:
+Boom Lifts
+Telescopic
+Engine Powered
+400 Series
+2026-06-29 16:53:04 | INFO     | Found 4 models...
+2026-06-29 16:53:04 | INFO     | Currently scraping model: 400S
+2026-06-29 16:53:04 | INFO     | Currently scraping model: 400S HC3
+2026-06-29 16:53:04 | INFO     | Currently scraping model: 460SJ
+2026-06-29 16:53:04 | INFO     | Currently scraping model: 460SJ HC3
+2026-06-29 16:53:04 | INFO     | Currently scraping:
+Boom Lifts
+Telescopic
+Engine Powered
+600 Crawler Series
+2026-06-29 16:53:08 | INFO     | Found 1 models...
+2026-06-29 16:53:08 | INFO     | Currently scraping model: 660SJC
+2026-06-29 16:53:08 | INFO     | Currently scraping:
+Boom Lifts
+Telescopic
+Engine Powered
+600 Series
+2026-06-29 16:53:11 | INFO     | Found 4 models...
+2026-06-29 16:53:11 | INFO     | Currently scraping model: 600S
+2026-06-29 16:53:11 | INFO     | Currently scraping model: 600S HC3
+2026-06-29 16:53:11 | INFO     | Currently scraping model: 660SJ
+2026-06-29 16:53:11 | INFO     | Currently scraping model: 660SJ HC3
+2026-06-29 16:53:11 | INFO     | Currently scraping:
+Boom Lifts
+Telescopic
+Engine Powered
+600 Self-Leveling Series
+2026-06-29 16:53:14 | INFO     | Found 1 models...
+2026-06-29 16:53:14 | INFO     | Currently scraping model: 670SJ
+2026-06-29 16:53:14 | INFO     | Currently scraping:
+Boom Lifts
+Telescopic
+Engine Powered
+800 Series
+2026-06-29 16:53:17 | INFO     | Found 4 models...
+2026-06-29 16:53:17 | INFO     | Currently scraping model: 800S
+2026-06-29 16:53:17 | INFO     | Currently scraping model: 800S HC3
+2026-06-29 16:53:17 | INFO     | Currently scraping model: 860SJ
+2026-06-29 16:53:17 | INFO     | Currently scraping model: 860SJ HC3
+2026-06-29 16:53:17 | INFO     | Currently scraping:
+Boom Lifts
+Telescopic
+Engine Powered
+Ultra Series
+2026-06-29 16:53:20 | INFO     | Found 4 models...
+2026-06-29 16:53:20 | INFO     | Currently scraping model: 1200SJP
+2026-06-29 16:53:20 | INFO     | Currently scraping model: 1350SJP
+2026-06-29 16:53:20 | INFO     | Currently scraping model: 1500SJ
+2026-06-29 16:53:20 | INFO     | Currently scraping model: 1850SJ
+2026-06-29 16:53:20 | INFO     | Saved 25 models...
+2026-06-29 16:53:33 | INFO     | Currently scraping:
+Boom Lifts
+Compact Crawlers
+2026-06-29 16:53:33 | INFO     | Found 0 models...
+2026-06-29 16:53:45 | INFO     | Currently scraping:
+Boom Lifts
+Toucan Mast Lift
+2026-06-29 16:53:45 | INFO     | Found 0 models...
+2026-06-29 16:53:58 | INFO     | Currently scraping:
+Boom Lifts
+Towable
+2026-06-29 16:53:58 | INFO     | Found 0 models...
+2026-06-29 16:54:10 | INFO     | Currently scraping:
+Scissor Lifts
+Davinci All Electric Series
+2026-06-29 16:54:10 | INFO     | Found 0 models...
+2026-06-29 16:54:22 | INFO     | Currently scraping:
+Scissor Lifts
+ERT Series
+2026-06-29 16:54:22 | INFO     | Found 0 models...
+2026-06-29 16:54:32 | INFO     | Currently scraping:
+Scissor Lifts
+Micro-Sized Series
+2026-06-29 16:54:32 | INFO     | Found 0 models...
+2026-06-29 16:54:44 | INFO     | Currently scraping:
+Scissor Lifts
+ES Series
+2026-06-29 16:54:44 | INFO     | Found 0 models...
+2026-06-29 16:54:55 | INFO     | Currently scraping:
+Scissor Lifts
+RT Series
+2026-06-29 16:54:55 | INFO     | Found 0 models...
+2026-06-29 16:55:08 | INFO     | Currently scraping:
+Telehandlers
+JLG Rotating Telehandlers
+2026-06-29 16:55:08 | INFO     | Found 0 models...
+2026-06-29 16:55:20 | INFO     | Currently scraping:
+Telehandlers
+JLG Telehandlers
+2026-06-29 16:55:20 | INFO     | Found 0 models...
+2026-06-29 16:55:34 | INFO     | Currently scraping:
+Telehandlers
+SkyTrak Telehandlers
+2026-06-29 16:55:34 | INFO     | Found 0 models...
+2026-06-29 16:55:50 | INFO     | Currently scraping:
+Low Level Access
+Non-Powered EcoLifts
+2026-06-29 16:55:50 | INFO     | Found 0 models...
+2026-06-29 16:56:08 | INFO     | Currently scraping:
+Low Level Access
+Push-Around Lifts
+2026-06-29 16:56:08 | INFO     | Found 0 models...
+2026-06-29 16:56:40 | INFO     | Currently scraping:
+Vertical Lifts
+2026-06-29 16:56:40 | INFO     | Found 0 models...
+2026-06-29 16:57:12 | INFO     | Currently scraping:
+Stock Pickers
+2026-06-29 16:57:12 | INFO     | Found 0 models...
+2026-06-29 16:57:15 | INFO     | Saved 35 models...
+2026-06-29 16:57:15 | INFO     | Chrome session closed
+2026-06-29 16:57:15 | INFO     | Excel saved: /Users/keshavgupta/Downloads/jlg_scraper/output/jlg_equipment.xlsx (35 rows)
+============================================================
+  JLG Equipment Hierarchy Scraper
+============================================================
+  headless  : True
+  max_pages : unlimited
+  resume    : False
+============================================================
+
+============================================================
+SCRAPE COMPLETE
+============================================================
+  Listing URLs visited : 17
+  Total models scraped : 35
+  Time taken           : 00:05:45
+============================================================
+
+Excel file saved → /Users/keshavgupta/Downloads/jlg_scraper/output/jlg_equipment.xlsx (35 models)
+
+Done in 00:05:45
