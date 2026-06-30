@@ -160,6 +160,29 @@ class KawasakiScraper:
         except:
             pass
 
+    def extract_breadcrumbs(self) -> list[str]:
+        """Extract the official hierarchy from the page breadcrumbs."""
+        try:
+            # Common breadcrumb selectors for Kawasaki en-us
+            selectors = [
+                "nav.breadcrumb ol li",
+                "div.breadcrumb-container a",
+                "ol[class*='breadcrumb' i] li",
+                ".breadcrumb li",
+            ]
+            
+            for sel in selectors:
+                elements = self.driver.find_elements(By.CSS_SELECTOR, sel)
+                if elements:
+                    crumbs = [el.text.strip() for el in elements if el.text.strip()]
+                    # Filter out 'Home' or 'en-us' if they appear
+                    filtered = [c for c in crumbs if c.lower() not in ["home", "products", "en-us"]]
+                    if filtered:
+                        return filtered
+        except:
+            pass
+        return []
+
     def is_product_page(self, url: str) -> bool:
         """
         Detects if a page is a specific product (Model).
@@ -264,16 +287,20 @@ class KawasakiScraper:
 
                 # Check for product
                 if self.is_product_page(url):
-                    # Clean up model name
-                    model_name = path[-1] if path else url.split("/")[-1].replace("-", " ").title()
-                    # Final check: Don't add if URL already in products
+                    # Use Breadcrumbs for the most accurate hierarchy
+                    breadcrumbs = self.extract_breadcrumbs()
+                    
+                    # If breadcrumbs found, they are the source of truth for the path
+                    current_path = breadcrumbs if breadcrumbs else path
+                    model_name = current_path[-1] if current_path else url.split("/")[-1].replace("-", " ").title()
+                    
                     if not any(p["model_url"] == url for p in self.products):
                         self.products.append({
-                            "path": path,
+                            "path": current_path,
                             "model_name": model_name,
                             "model_url": url
                         })
-                        log.info(f"  [PRODUCT FOUND] {model_name}")
+                        log.info(f"  [PRODUCT FOUND] {' > '.join(current_path)}")
 
                 # Find sub-links (Only deeper ones)
                 children = self.extract_links(url)
@@ -311,14 +338,17 @@ def export_to_excel(products):
         return
 
     log.info("Processing data for Excel...")
-    # Deduplicate products by URL
     df_raw = pd.DataFrame(products)
     df_raw = df_raw.drop_duplicates(subset=["model_url"])
 
-    # Determine max category depth
-    max_depth = 0
+    # Determine max category depth (excluding model name)
+    max_header_count = 0
     for p in products:
-        max_depth = max(max_depth, len(p["path"]))
+        # Subtract 1 if the model is the last item in path
+        max_header_count = max(max_header_count, len(p["path"]) - 1)
+    
+    # Use at least 1 header if depth is small
+    max_header_count = max(max_header_count, 1)
 
     rows = []
     for _, p in df_raw.iterrows():
@@ -326,23 +356,19 @@ def export_to_excel(products):
         model_name = p["model_name"]
         model_url = p["model_url"]
         
-        # Padded category list
-        # If path is [Motorcycle, Ninja, Sport, Ninja 650]
-        # Categories are [Motorcycle, Ninja, Sport]
-        categories = path[:-1] if len(path) > 1 else path
-        padded_path = categories + [""] * (max_depth - 1 - len(categories))
+        # Extract category levels (all but the last item)
+        categories = path[:-1] if len(path) > 1 else []
         
-        rows.append(padded_path + [model_name, model_url])
+        # Pad with empty strings to match max depth
+        padded_headers = categories + [""] * (max_header_count - len(categories))
+        
+        # Final row: [Header 1, Header 2, ..., Model Name, Model URL]
+        rows.append(padded_headers + [model_name, model_url])
 
-    # Dynamic column names
-    col_names = ["Category"] + [f"Sub-Category {i}" for i in range(1, max_depth - 1)] + ["Model Name", "Model URL"]
+    # Dynamic column names: Header 1, Header 2, ..., Model Name, Model URL
+    col_names = [f"Header {i+1}" for i in range(max_header_count)] + ["Product", "URL"]
     
-    # Handle edge case where max_depth is 1
-    if max_depth <= 1:
-        col_names = ["Model Name", "Model URL"]
-        rows = [[p["model_name"], p["model_url"]] for _, p in df_raw.iterrows()]
-
-    df = pd.DataFrame(rows, columns=col_names[:len(rows[0])])
+    df = pd.DataFrame(rows, columns=col_names)
     df.to_excel(OUTPUT_EXCEL, index=False)
     log.info(f"Successfully exported {len(df)} products to {OUTPUT_EXCEL}")
 
