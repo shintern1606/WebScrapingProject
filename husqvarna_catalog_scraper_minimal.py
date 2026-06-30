@@ -90,11 +90,21 @@ def get_products_on_page(driver, category_url):
     click_load_more_until_done(driver)
     soup = BeautifulSoup(driver.page_source, "html.parser")
     results = []
+    badge_words = ("guarantee", "award winner", "best seller", "new")
     for card in soup.select("[data-product-sku]"):
         name_tag = card.select_one("h3")
         link_tag = card.select_one("a[href]")
+        sub_category = ""
+        if name_tag:
+            sibling = name_tag.find_previous_sibling()
+            while sibling is not None:
+                text = sibling.get_text(strip=True)
+                if text and not any(w in text.lower() for w in badge_words):
+                    sub_category = text
+                    break
+                sibling = sibling.find_previous_sibling()
         if name_tag and link_tag:
-            results.append((name_tag.get_text(strip=True), urljoin(BASE_URL, link_tag["href"])))
+            results.append((name_tag.get_text(strip=True), urljoin(BASE_URL, link_tag["href"]), sub_category))
     return results
 
 def save_progress(all_rows, filename):
@@ -118,11 +128,12 @@ def main():
                 products = get_products_on_page(driver, link["url"])
             except Exception:
                 products = []
-            for model_name, product_url in products:
+            for model_name, product_url, sub_category in products:
                 all_rows.append({
                     "Header 1": link["header1"],
                     "Header 2": link["header2"],
                     "Header 3": link["header3"],
+                    "Sub Category": sub_category,
                     "Product Model Name": model_name,
                     "Product URL": product_url,
                 })
